@@ -5,6 +5,8 @@ import { Services } from './sections/Services'
 import { Estimator } from './sections/Estimator'
 import { Process } from './sections/Process'
 import { Faq } from './sections/Faq'
+import { Contact } from './sections/Contact'
+import {Footer} from './components/Footer'
 
 export const App = () => {
   const [estimate, setEstimate] = useState(null)
@@ -23,8 +25,9 @@ export const App = () => {
         <Estimator onApply={handleApplyEstimate} />
         <Process />
         <Faq />
-        <div style={{ height: '100vh' }} /> {/* temporary, scroll ke liye */}
+        <Contact estimate={estimate} />
       </main>
+      <Footer />
     </>
   )
 
