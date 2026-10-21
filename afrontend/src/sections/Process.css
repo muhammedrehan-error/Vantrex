@@ -1,0 +1,65 @@
+.process {
+    position: relative;
+    padding: 4rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.process__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+/* .glass-card.process-card: dono class saath likhi hain taaki glass ke default style ko override kar sake */
+.glass-card.process-card {
+    padding: 1.5rem;
+    border-radius: 1rem;
+    background: rgba(18, 18, 22, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.glass-card.process-card:hover {
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: none;
+    box-shadow: none;
+}
+
+.process-card__stage {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+}
+
+.process-card__stage--crimson {
+    color: var(--crimson);
+}
+
+.process-card__stage--emerald {
+    color: var(--emerald);
+}
+
+.process-card__title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.process-card__text {
+    font-size: 0.875rem;
+    line-height: 1.7;
+    color: var(--muted);
+}
+
+@media (min-width: 768px) {
+    .process__grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .process {
+        padding: 5rem 0;
+    }
+}
